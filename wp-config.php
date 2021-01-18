@@ -26,10 +26,10 @@ define( 'DB_NAME', 'wordpress' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'Zx171260225!' );
+define( 'DB_PASSWORD', '' );
 
 /** MySQL hostname */
-define( 'DB_HOST', '92.38.171.129' );
+define( 'DB_HOST', 'localhost' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -88,3 +88,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
+
+
+@ini_set( 'upload_max_filesize' , '256M' );
+@ini_set( 'post_max_size', '256M');
+@ini_set( 'memory_limit', '512M' );
+@ini_set( 'max_execution_time', '600' );
+@ini_set( 'max_input_time', '600' );
